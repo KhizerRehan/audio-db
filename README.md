@@ -2,9 +2,19 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## About
+Here is a free API, build a simple site/app where a user can search an artist by using keywords. Then if the user clicks on the Artist, it will display It’s album list plus any other information you want to show
+
 ## Getting Started
 
 First, run the development server:
+
+## npm install
+
+## node version
+- v18.19.0
+## npm version
+10.2.3
 
 ```bash
 npm run dev
@@ -15,6 +25,8 @@ pnpm dev
 # or
 bun dev
 ```
+
+- Default landing page should be Artist with `coldplay` as the default search keyword
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
