@@ -2,18 +2,27 @@ import React, { ChangeEvent, Key, useCallback, useMemo, useState } from "react"
 import { Button, Pagination, Table, TableBody, TableCell, TableColumn, TableHeader, TableRow, } from "@nextui-org/react"
 import { Album } from "./data-table-source"
 import { useTheme as useNextTheme } from "next-themes"
+import { useRouter } from 'next/navigation';
 
-export default function DataTable({data, columns, filterColumn, placeholder = 'items'}: {
+export default function DataTable({
+                                    data,
+                                    columns,
+                                    filterColumn,
+                                    placeholder = 'items',
+                                    allowNavigation
+}: {
   data: any[],
   columns: any,
   filterColumn: string,
-  placeholder?: string
+  placeholder?: string,
+  allowNavigation?: boolean
 }) {
   const [filterValue, setFilterValue] = useState("")
   const [rowsPerPage, setRowsPerPage] = useState(20)
   const [page, setPage] = useState(1)
   const {resolvedTheme} = useNextTheme()
   const hasSearchFilter = Boolean(filterValue)
+  const router = useRouter();
 
   const filteredItems = useMemo(() => {
     let filteredUsers = [...data]
@@ -134,6 +143,11 @@ export default function DataTable({data, columns, filterColumn, placeholder = 'i
       }}
       topContent={topContent}
       topContentPlacement="outside"
+      onRowAction={(key) => {
+        if (allowNavigation && key) {
+          router.push(`/list/album?artistName=${key}`)
+        }
+      }}
     >
       <TableHeader columns={columns}>
         {(column: any) => (

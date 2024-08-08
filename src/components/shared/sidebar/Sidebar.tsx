@@ -26,12 +26,6 @@ export const SidebarWrapper = () => {
         <div className="flex h-full flex-col justify-between">
           <div className={Sidebar.Body()}>
             <SidebarItem
-              title="Album"
-              icon={<HomeIcon />}
-              isActive={pathname === "/album"}
-              href={Route.albumRoute}
-            />
-            <SidebarItem
               title="Artists"
               icon={<HomeIcon />}
               isActive={pathname === "/artist"}

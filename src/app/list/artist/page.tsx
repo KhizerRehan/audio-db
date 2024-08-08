@@ -23,7 +23,6 @@ const ArtistPage = () => {
         const data = await getArtistByArtistName(debouncedSearchTerm);
         results = data?.artists || [];
       }
-      debugger;
       setArtists(results)
     };
 
@@ -55,7 +54,11 @@ const ArtistPage = () => {
             onChange={handleChange}
           />
         </div>
-        <DataTable data={artists} columns={artistColumns} filterColumn={'strArtist'} />
+        <DataTable data={artists}
+                   columns={artistColumns}
+                   filterColumn={'strArtist'}
+                   allowNavigation={true}
+        />
       </div>
     </div>
   )

@@ -22,46 +22,8 @@ export interface Album {
   strLabel: string;
 }
 
-// Static data for the table
-const albums = [
-  {
-    idAlbum: "2112973",
-    idArtist: "111492",
-    idLabel: "43473",
-    strAlbum: "Homework",
-    strArtist: "Daft Punk",
-    intYearReleased: "1997",
-    strStyle: "Electronic",
-    strGenre: "House",
-    strLabel: "Columbia"
-  },
-  {
-    idAlbum: "2112974",
-    idArtist: "111493",
-    idLabel: "43474",
-    strAlbum: "Discovery",
-    strArtist: "Daft Punk",
-    intYearReleased: "2001",
-    strStyle: "Electronic",
-    strGenre: "House",
-    strLabel: "Columbia"
-  },
-  {
-    idAlbum: "2112975",
-    idArtist: "111494",
-    idLabel: "43475",
-    strAlbum: "Random Access Memories",
-    strArtist: "Daft Punk",
-    intYearReleased: "2013",
-    strStyle: "Electronic",
-    strGenre: "House",
-    strLabel: "Columbia"
-  }
-];
-
 
 // Artist
-
 const artistColumns = [
   {uid: "idArtist", name: "Artist ID"},
   {uid: "strArtist", name: "Artist Name"},
