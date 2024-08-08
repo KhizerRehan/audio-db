@@ -1,20 +1,14 @@
 "use client"
 
-import { Route } from "@/components/shared/sidebar/route"
+import { Layout } from "@/components/layout/layout";
+import ArtistPage from "@/app/list/artist/page";
 
 
 const App = () => {
   return (
-    <main className="h-full w-full]">
-      <ul>
-        <li>
-          <a href={Route.artistRoute}>Artist</a>
-        </li>
-        <li>
-          <a href={Route.albumRoute}>Album</a>
-        </li>
-      </ul>
-    </main>
+    <Layout>
+      <ArtistPage />
+    </Layout>
   )
 }
 
